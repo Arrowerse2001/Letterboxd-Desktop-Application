@@ -8,8 +8,11 @@
   },
   "author": "Iain Nicholson",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "electron-packager": "^13.1.0"
+  },
   "devDependencies": {
+    "asar": "^1.0.0",
     "electron": "^4.0.6"
   }
 }

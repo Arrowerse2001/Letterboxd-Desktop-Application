@@ -1,13 +1,11 @@
 const electron = require('electron');
 const url = require('url');
 const path = require('path');
+const naiveImage = electron.nativeImage;
 
 
 
-const options = {
-  verbose: true,
-  logger: console,
-};
+const { app, BrowserWindow, Menu, ipcMain } = electron;
 
 
 
@@ -16,7 +14,7 @@ const options = {
 let mainWindow;
 
 app.on('ready', function() {
-    mainWindow = new BrowserWindow({ width: 800, height: 600}); ({
+    mainWindow = new BrowserWindow({ 
         webPreferences: {
             plugins: true,
             sandbox: true,
@@ -24,10 +22,15 @@ app.on('ready', function() {
         }
     });
 
-    blockWindowAds(mainWindow, options);
-
+   
 
     mainWindow.loadURL('http://www.letterboxd.com');
+
+    mainWindow.on('closed', function(){
+        app.quit();
+    });
+
+    
 })
 
 
