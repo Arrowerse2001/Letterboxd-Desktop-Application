@@ -1,18 +1,19 @@
 {
-  "name": "letterboxd_desktop_app",
+  "name": "letterboxd",
   "version": "1.0.0",
-  "description": "My Electron playground",
+  "description": "A desktop app for Letterboxd",
   "main": "main.js",
   "scripts": {
     "start": "electron ."
   },
   "author": "Iain Nicholson",
   "license": "MIT",
-  "dependencies": {
-    "electron-packager": "^13.1.0"
-  },
   "devDependencies": {
-    "asar": "^1.0.0",
-    "electron": "^4.0.6"
+    "electron": "^4.1.1",
+    "electron-packager": "^13.1.1"
+  },
+  "dependencies": {
+    "ad-block": "^4.1.3",
+    "custom-electron-titlebar": "^3.0.8"
   }
 }
