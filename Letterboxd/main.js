@@ -9,24 +9,20 @@ let mainWindow;
 
 
 
-
 app.on('ready', function() {
     mainWindow = new BrowserWindow({titleBarStyle: 'hidden',
-     width: 1281,
-     height: 800,
-     autoHideMenuBar: true,
+     fullscreen: true,
+     autoHideMenuBar: false,
+     transparent: true,
      frame: false,
      webPreferences: {
          plugins: true,
          sandbox: true,
          nodeIntegration: false,
+         preload: "C:\Users\Iain\Documents\GitHub\Letterboxd-Desktop-Application\Letterboxd\adblock.js"
      }
      
     });
     
-    mainWindow.loadURL('http://www.letterboxd.com');
-
-    
-
-    
+    mainWindow.loadURL('http://www.letterboxd.com');  
 })
