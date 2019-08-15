@@ -6,14 +6,19 @@
   "scripts": {
     "pack": "electron-builder --dir",
     "dist": "electron-builder",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
+    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/icons/mac/icon.icns --prune=true --out=release-builds",
+    "package-win": "electron-packager . electron-tutorial-app --overwrite --asar=true --platform=win32 --arch=ia32 --icon=assets/icons/win/icon.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Electron Tutorial App\"",    
     "start": "electron ."
   },
   "author": "Iain Nicholson",
   "license": "MIT",
   "devDependencies": {
     "electron": "^4.1.1",
-    "electron-packager": "^13.1.1",
-    "electron-builder": "^21.2.0"
+    "electron-builder": "^21.2.0",
+    "electron-package": "^0.1.0",
+    "electron-packager": "^13.1.1"
   },
   "dependencies": {
     "ad-block": "^4.1.3",

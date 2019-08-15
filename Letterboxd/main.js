@@ -28,5 +28,5 @@ app.on('ready', function() {
      
     });
     
-    mainWindow.loadURL('http://letterboxd.com');  
-}
+    mainWindow.loadURL('http://letterboxd.com');
+});
