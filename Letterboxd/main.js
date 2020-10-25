@@ -1,32 +1,25 @@
 const electron = require('electron');
 const url = require('url');
 const path = require('path');
+const { webviewTag } = require('electron');
 
-const { app, BrowserWindow, Menu, ipcMain, icon } = electron;
+const { app, BrowserWindow, Menu, ipcMain} = electron;
 
-let mainWindow;
-
-
-
-
+let win;
 
 app.on('ready', function() {
-    mainWindow = new BrowserWindow({titleBarStyle: 'hidden',
+    win = new BrowserWindow({
+    titleBarStyle: 'hidden',
      fullscreen: true,
      autoHideMenuBar: false,
-     autoHideMenuBar: false,
-     transparent: true,
-     frame: false,
-     sidebar: false,
+     frame: false,     
      fullscreenWindowTitle: true,
+     darkTheme: true,
      webPreferences: {
          plugins: true,
          sandbox: true,
-         nodeIntegration: false,
-         
-     }
-     
-    });
-    
-    mainWindow.loadURL('http://letterboxd.com');
+         nodeIntegration: false,       
+     }    
+});
+    win.loadURL("https://www.letterboxd.com/");
 });
