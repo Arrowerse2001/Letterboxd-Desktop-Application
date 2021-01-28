@@ -11,7 +11,7 @@
     "author": "Iain Nicholson",
     "license": "MIT",
     "devDependencies": {
-      "electron": "^4.1.1",
+      "electron": "^9.4.0",
       "electron-builder": "^21.2.0",
       "electron-package": "^0.1.0",
       "electron-packager": "^13.1.1"
